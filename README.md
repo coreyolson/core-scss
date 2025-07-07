@@ -42,16 +42,16 @@
 |----------------|----------------------------------------------------------|
 | **Spacing**    | `m0–m3`, `p0–p3`, `mx`, `my`, `px`, `py`                 |
 | **Grid**       | `.container`, `.row`, `.col-1` to `.col-12`              |
+| **Alignment**  | `text-left`, `text-center`, `text-right`                 |
 | **Text Size**  | `text-xs`, `text-sm`, `text-lg`, `text-xl`               |
 | **Text Weight**| `text-light`, `text-normal`, `text-bold`                 |
 | **Text Flow**  | `wrap`, `nowrap`, `break`, `truncate`                    |
 | **Text Color** | `.muted`                                                 |
 | **Link**       | `.link-plain`                                            |
-| **Alignment**  | `text-left`, `text-center`, `text-right`                 |
-| **Flex**       | `flex`, `justify-*`, `items-center`                      |
-| **Display**    | `block`, `inline`, `inline-block`, `hidden`              |
 | **Lists**      | `.list-plain`                                            |
 | **Visibility** | `hide-sm`, `show-md`, etc.                               |
+| **Flex**       | `flex`, `justify-*`, `items-center`                      |
+| **Display**    | `block`, `inline`, `inline-block`, `hidden`              |
 | **Z-Index**    | `z-0`, `z-10`, `z-20`, `z-30`, `z-auto`                  |
 | **Width**      | `w-25`, `w-50`, `w-75`, `w-100`                          |
 | **Print**      | `.no-print`, `.print-only`                               |
