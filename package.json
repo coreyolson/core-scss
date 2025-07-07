@@ -1,26 +1,20 @@
 {
   "name": "core-scss",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A minimal, reusable SCSS core for layout, spacing, typography, and responsive utilities.",
-  "main": "core.scss",
-  "style": "core.scss",
-  "files": [
-    "core.scss"
-  ],
+  "style": "src/_index.scss",
+  "files": ["src"],
   "author": "Corey Olson",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coreyolson/core-scss.git"
   },
+  "homepage": "https://github.com/coreyolson/core-scss",
   "keywords": [
     "scss",
-    "sass",
     "utility",
     "responsive",
-    "layout",
-    "spacing",
-    "typography",
     "minimal"
   ]
 }
