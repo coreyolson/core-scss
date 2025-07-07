@@ -1,0 +1,302 @@
+/**
+ * Core SCSS
+ * ------------------------------------------------
+ * A minimal, reusable SCSS starter for consistent layout, typography,
+ * forms, and utilities across projects. Designed for clarity, responsiveness,
+ * and accessibility, without opinionated visual styling.
+ *
+ * Includes:
+ * - Typographic structure
+ * - Flex-based layout grid
+ * - Margin, padding, gap, width, and alignment utilities
+ * - Form resets and accessibility focus styles
+ * - Responsive visibility classes
+ * - Print styles for clean output
+ *
+ * Suitable for both content-first and JS-heavy applications.
+ *
+ * @version     1.0.0
+ * @author      Corey Olson
+ * @license     MIT (https://opensource.org/licenses/MIT)
+ * @copyright   Copyright (c) 2025
+ */
+
+html {
+    font: 62.5%/1.2 sans-serif;
+}
+
+body {
+    font: 1.5em/1.6 sans-serif;
+    margin: 0;
+}
+
+/* === TYPOGRAPHY: Headings === */
+$headings: (1: 4.0rem 1.1, 2: 3.6rem 1.2, 3: 3.0rem 1.3, 4: 2.4rem 1.4, 5: 1.8rem 1.5, 6: 1.5rem 1.6);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+@each $num, $size, $line in $headings {
+    h#{$num} {
+        font-size: $size;
+        line-height: $line;
+    }
+}
+
+/* === TYPOGRAPHY: Links === */
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* === ELEMENTS: Tables === */
+td,
+th {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+/* === ELEMENTS: Inline Markup === */
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+// Add vertical spacing for rhythm
+p,
+ul,
+ol {
+  margin-bottom: 1rem;
+}
+
+/* === FORMS: Inputs & Controls === */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: 100%/1.2 sans-serif;
+    text-transform: none;
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  font: inherit;
+}
+
+// Global states for accessibility and clarity
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* === LAYOUT: Container === */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 425px) {
+    .container {
+        width: 85%;
+        padding: 0;
+    }
+}
+
+/* === LAYOUT: Flex Rows === */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+/* === LAYOUT: Flex Columns === */
+.col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.col-1 { flex-basis: 8.3333%; max-width: 8.3333%; }
+.col-2 { flex-basis: 16.6667%; max-width: 16.6667%; }
+.col-3 { flex-basis: 25%; max-width: 25%; }
+.col-4 { flex-basis: 33.3333%; max-width: 33.3333%; }
+.col-5 { flex-basis: 41.6667%; max-width: 41.6667%; }
+.col-6 { flex-basis: 50%; max-width: 50%; }
+.col-7 { flex-basis: 58.3333%; max-width: 58.3333%; }
+.col-8 { flex-basis: 66.6667%; max-width: 66.6667%; }
+.col-9 { flex-basis: 75%; max-width: 75%; }
+.col-10 { flex-basis: 83.3333%; max-width: 83.3333%; }
+.col-11 { flex-basis: 91.6667%; max-width: 91.6667%; }
+.col-12 { flex-basis: 100%; max-width: 100%; }
+
+/* === UTILITIES: Spacing Mixin === */
+@mixin generate-spacing($property, $suffix) {
+  @for $i from 0 through 3 {
+    .#{$property}#{$i} { #{$suffix}: #{$i}rem; }
+    .#{$property}t#{$i} { #{$suffix}-top: #{$i}rem; }
+    .#{$property}b#{$i} { #{$suffix}-bottom: #{$i}rem; }
+    .#{$property}l#{$i} { #{$suffix}-left: #{$i}rem; }
+    .#{$property}r#{$i} { #{$suffix}-right: #{$i}rem; }
+    .#{$property}x#{$i} {
+      #{$suffix}-left: #{$i}rem;
+      #{$suffix}-right: #{$i}rem;
+    }
+    .#{$property}y#{$i} {
+      #{$suffix}-top: #{$i}rem;
+      #{$suffix}-bottom: #{$i}rem;
+    }
+  }
+}
+
+/* === UTILITIES: Spacing Utilities === */
+@include generate-spacing("m", "margin");
+@include generate-spacing("p", "padding");
+
+/* === UTILITIES: Gap === */
+.gap-0 { gap: 0; }
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
+.gap-3 { gap: 3rem; }
+
+/* === UTILITIES: Text Sizing === */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.25rem; }
+.text-xl { font-size: 1.5rem; }
+
+/* === UTILITIES: Alignment === */
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+/* === UTILITIES: Flexbox Alignment === */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+
+/* === UTILITIES: Screen Reader Only === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === UTILITIES: Z-Index === */
+.z-0    { z-index: 0; }
+.z-10   { z-index: 10; }
+.z-20   { z-index: 20; }
+.z-30   { z-index: 30; }
+.z-auto { z-index: auto; }
+
+/* === UTILITIES: Responsive Visibility === */
+@media (max-width: 600px) {
+  .hide-sm { display: none !important; }
+  .show-sm { display: block !important; }
+}
+
+@media (min-width: 601px) {
+  .hide-md { display: none !important; }
+  .show-md { display: block !important; }
+}
+
+@media (min-width: 768px) {
+  .hide-lg { display: none !important; }
+  .show-lg { display: block !important; }
+}
+
+@media (min-width: 1024px) {
+  .hide-xl { display: none !important; }
+  .show-xl { display: block !important; }
+}
+
+/* === UTILITIES: Widths === */
+.w-25  { width: 25%; }
+.w-50  { width: 50%; }
+.w-75  { width: 75%; }
+.w-100 { width: 100%; }
+
+/* === UTILITIES: Text Wrapping === */
+.wrap     { white-space: normal; word-wrap: break-word; }
+.nowrap   { white-space: nowrap; }
+.break    { word-break: break-word; }
+
+/* === UTILITIES: Truncate === */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* === PRINT: Styles === */
+@media print {
+  .no-print { display: none !important; }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: none;
+  }
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  .container {
+    width: auto;
+    padding: 0;
+  }
+}

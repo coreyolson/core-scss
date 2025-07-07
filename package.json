@@ -1,0 +1,10 @@
+{
+  "name": "core-scss",
+  "version": "1.0.0",
+  "description": "A minimal, reusable SCSS core for layout, spacing, typography, and responsive utilities.",
+  "main": "core.scss",
+  "style": "core.scss",
+  "files": ["core.scss"],
+  "author": "Corey Olson",
+  "license": "MIT"
+}
