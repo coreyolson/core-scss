@@ -1,6 +1,6 @@
 {
   "name": "core-scss",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A minimal, reusable SCSS core for layout, spacing, typography, and responsive utilities.",
   "style": "src/_index.scss",
   "files": ["src"],

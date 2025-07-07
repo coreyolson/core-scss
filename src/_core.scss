@@ -279,9 +279,47 @@ button {
   text-overflow: ellipsis;
 }
 
+/* === UTILITIES: Display === */
+.block        { display: block; }
+.inline       { display: inline; }
+.inline-block { display: inline-block; }
+.hidden       { display: none !important; }
+
+/* === UTILITIES: Text Weight === */
+.text-normal { font-weight: 400; }
+.text-bold   { font-weight: 700; }
+.text-light  { font-weight: 300; }
+
+/* === UTILITIES: Muted === */
+.muted {
+  color: #777;
+}
+
+/* === UTILITIES: Lists === */
+.list-plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* === UTILITIES: Link (unstyled) === */
+.link-plain {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* === PRINT: Styles === */
+.print-only {
+  display: none !important;
+}
+
 @media print {
   .no-print { display: none !important; }
+  .print-only { display: block !important; }
 
   body {
     font-size: 12pt;
