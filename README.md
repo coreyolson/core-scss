@@ -1,10 +1,10 @@
-# Core.scss
+# core.scss
 
 ![Version](https://img.shields.io/github/v/tag/coreyolson/core-scss?label=version)
 ![License](https://img.shields.io/github/license/coreyolson/core-scss)
 ![Style](https://img.shields.io/badge/style-SCSS-blue)
 
-**Core.scss** is a minimal, reusable SCSS starter for consistent layout, spacing, and typography across projects. It provides the essentials. No colors, no branding, just a clean functional scss starter to build from.
+**core.scss** is a minimal, reusable SCSS starter for consistent layout, spacing, and typography across projects. It provides the essentials. No colors, no branding, just a clean functional scss starter to build from.
 
 ---
 

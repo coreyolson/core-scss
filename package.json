@@ -6,5 +6,19 @@
   "style": "core.scss",
   "files": ["core.scss"],
   "author": "Corey Olson",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coreyolson/core-scss.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "utility",
+    "responsive",
+    "layout",
+    "spacing",
+    "typography",
+    "minimal"
+  ]
 }
