@@ -53,5 +53,30 @@
 
 ---
 
+## Installation
+
+Install via NPM:
+
+```bash
+npm install core-scss
+```
+
+Then in your SCSS:
+
+```scss
+@use "core-scss/src/index" as *;
+```
+
+> Note: Sass does **not** yet resolve the package entry by `package.json`.  
+> Be sure to include the full path (`/src/index`) and **omit** the underscore + extension.
+
+If using the Sass CLI, include the node_modules path:
+
+```bash
+sass --load-path=node_modules src/scss/style.scss public/css/style.css
+```
+
+---
+
 ## License
 This project is licensed under the MIT License.
